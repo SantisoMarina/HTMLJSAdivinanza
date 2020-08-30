@@ -1,0 +1,120 @@
+<!-- Actividad:
+A fin de interactuar con el usuario y, utilizando javascript, agrega en tu sitio web una adivinanza (relacionada al tema del sitio) con hasta 4 intentos.
+El apartado de adivinanza, deberá:
+•contener un cuadro texto y un botón
+•facilitar al usuario 2 pistas si el usuario no acierta en el intento 2 y 3.
+•informar en todo momento al usuario el nro intentos que le quedan.
+•informar el resultado final (si acierta o si perdió los 4 intentos).
+(opcional) usar los componentes de Alertas de Bootstrap 4 para informar al usuario.
+
+Se valorará:
+•inclusión de todos los ítems mencionados en la consigna
+•aplicación de los contenidos teóricos desarrollados
+•creatividad en la implementación de la actividad
+•funcionalidad del sitio web responsive solicitado
+•coherencia
+•prolijidad
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.css" text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/muffin.png">
+    <meta name="autor" content="Marina Santiso Filippi">
+    <script src="javascript/script.js"> </script>
+    <title>Postres</title>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/muffin(1).png" width="30" height="30" alt="" loading="lazy"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="index.html">Inicio <span class="sr-only">(actual)</span></a>
+                    <a class="nav-link" href="postres.html">Postres</a>
+                    <a class="nav-link " href="preferencias.html">Preferencias </a>
+                    <a class="nav-link" href="adivinanza.html">Adivinanza</a>
+                    <a class="nav-link" href="registro.html">Unite!</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <main>
+        <h1 class="af" style="color: #f3736f">Divertite con esta adivinanza ♥</h1><br>
+
+      
+        <div class="jumbotron jumbotron-fluid">
+            <div class="bg"></div>
+            <div class="container">
+                <div class="container text-center">
+                    <button id="intentos" type="button" class="btn btn-dark buttonRedondo">
+                        Intentos <span class="badge badge-pill badge-dark">4</span>
+                        <span class="sr-only">unread messages</span>
+                    </button>
+                </div>
+                <h1 class="display-4"><strong>¿Cúal es el postre más pedido en Argentina?</strong></h1>
+                <p class="lead">
+                <form id="myForm">
+                    <div class="form-group">
+
+                        <input required type="text" class="form-control" id="respuesta"
+                            placeholder="Escriba su respuesta">
+
+                    </div>
+
+                    <button type="submit" class="btn btn-dark btn-lg float-right" id="btnAceptar"
+                        onclick="validarRespuesta()">OK</button>
+
+                </form>
+
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div id="divPista" class="alert alert-dark alert-dismissible fade show" role="alert">
+
+
+
+            </div>
+
+        </div>
+        <div class="container" id="divFlan"><img src="images/flancito.gif"><img src="images/flancito.gif">
+            <img src="images/flancito.gif"><img src="images/flancito.gif"></div>
+
+
+
+    </main>
+    <script>
+        document.getElementById('divPista').style.display = 'none'
+        document.getElementById('divFlan').style.display = 'none'
+
+        //esto elimina el reload de la página en submit
+        var form = document.getElementById("myForm");
+        function handleForm(event) { event.preventDefault(); }
+        form.addEventListener('submit', handleForm);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

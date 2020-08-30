@@ -1,0 +1,114 @@
+h1.af
+{
+color: rgb(37, 37, 37);
+text-align: center;
+font-size: 60px;
+}
+
+table {
+    border: 2px solid #FFFFFF;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  table td table  th {
+    border: 1px solid #FFFFFF;
+    padding: 3px 4px;
+  }
+  table j tbody td {
+    font-size: 13px;
+  }
+  table  td:nth-child(even) {
+    background: #f3736f;
+  }
+  table  thead {
+    background: #FFFFFF;
+    border-bottom: 4px solid #f3736f;
+  }
+  table  thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    border-left: 2px solid #f3736f;
+  }
+  table  thead th:first-child {
+    border-left: none;
+  }
+  
+  table  tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    border-top: 4px solid #f3736f;
+  }
+  table  tfoot td {
+    font-size: 14px;
+  }
+/*
+.topnav {
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+
+  .topnav a {
+    float: left;
+    color: #a7a7a7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: #FFFFFF;
+  }
+  
+
+  .topnav a.active {
+    background-color: #f3736f;
+    color: white;
+  }
+*/
+
+li::marker {
+  color: #f3736f;
+}
+.badge-dark {
+  color: #fff;
+  background-color: #f3736f;
+}
+.buttonRedondo {
+  border-radius: 22px;
+
+}
+
+.bg-transparent{
+  background: transparent;
+
+}
+.jumbotron .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/img11.jpg);
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+   -o-filter: blur(8px);
+   -ms-filter: blur(8px);
+   filter: blur(8px);
+   z-index: -1;
+}
+body .jumbotron {
+  margin-bottom: 0px;
+  position: relative;
+  background: none;
+
+}
